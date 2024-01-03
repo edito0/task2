@@ -1,0 +1,284 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* NAVBAR STARTS */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 30px;
+
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--dark);
+
+    position: relative;
+
+    transition: all 0.9s ease;
+}
+
+.nav_logo {
+   width: 200px;
+   height: 63px;
+
+   display: flex;
+   align-items: center;
+}
+
+.nav_logo>svg { 
+    height: 50px;
+}
+
+.nav_items>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_items>ul>li {
+    list-style: none;
+}
+
+.nav_items>ul>li>a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    color: var(--dark);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_email{
+    width: 230px;
+    text-align: end;
+}
+
+.nav_email>a {
+    text-decoration: none;
+    display: block;
+    color: #3282B8;
+}
+
+.nav a:hover {
+    color: #3282B8;
+}
+
+.humburger {
+    position: absolute;
+    right: 30px;
+    top: 21px;
+    display: none;
+}
+
+
+.humburger-line {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0px;
+    background-color:  #3282B8;
+}
+
+
+
+/* NAVBAR ENDS */
+
+
+/* HERO STARTS */ 
+
+.shs-1 {
+    height: calc(100vh - 73px);
+    width: 100%;
+
+    overflow: hidden;
+
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 10px; 
+    transform: scale(0.8);
+    opacity: 0.6;
+}
+
+.arrow-right {
+    position: absolute;
+    top: 50%; 
+    right: 10px;
+    transform: scale(0.8);
+    opacity: 0.6;
+}
+
+.shs-1-1 {
+
+    height: calc(100vh - 73px);
+    width: 100%;
+
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.shs-1-1>img {
+    height: calc(100vh - 73px);
+    width: 100%;
+
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+}
+
+.shs-1-1>h1 {
+    text-transform: uppercase;
+    height: calc(100vh - 73px);
+    width: 80%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px black;
+    padding: 1% 6% ;
+    font-size: 7vw;
+    pointer-events: none;
+
+    display: flex;
+    align-items: end;
+}
+
+/* HERO ENDS */ 
+
+
+ 
+
+/* FOOTER STARTS*/
+.footer {
+    background-color:#3282B8;
+    width: 100%; 
+    height: 190px;
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+
+    position: absolute;
+    bottom: -190px;
+}
+
+
+.footer>div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer>div:first-child>div {
+    margin: 20px;
+}
+
+.footer>div>div>a>i {
+    font-size: 20px;
+}
+
+.footer>div:last-child {
+    font-weight: lighter;
+}
+
+.footer>div:last-child>a {
+    color: white;
+    text-decoration: none;
+}
+
+/* FOOTER ENDS*/
+
+
+
+@media only screen and (max-width:1200px) {
+    .nav {
+        height: 70px;
+        display: block;
+        padding: 5px 0px;
+    }
+
+    .nav_logo {
+        margin: 0px 0px 0px 30px;
+    } 
+
+    .humburger {
+        display: block;
+    }
+
+    .nav_items {
+        background-color: #1C1C1C;
+        position: absolute;
+        left: -100%;
+
+        padding: 20px 0px;
+        width: 100%;
+        height: calc(100vh - 60px);
+
+        transition: all 0.9s ease;
+
+        z-index: 1;
+    }
+
+    .nav_email {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 300px;
+        left: -100%; 
+        width: 100%;
+
+        transition: all 0.9s ease;
+
+        z-index: 1;
+    }
+
+    .nav_items>ul {
+        flex-direction: column;
+    }
+
+    .nav_items>ul>li {
+       margin: 10px 0px;
+    }
+    
+
+    .nav_items_menu {
+        left: 0;
+    }
+
+    .nav_email_menu {
+        left: 0;
+    }
+
+    
+}
+
+@media only screen and (max-width:900px) {
+    
+    .shs-1-1>h1 {
+        padding: 5% 10% ;
+        font-size: 13vw;
+    
+    }
+    
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script defer src="/app.js"></script>
+
+    <title>Welcome</title>
+
+</head> 
+
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <a class="nav_logo" href="/" aria-label="Return to home page">
+                <p>COOL BIKES</p>
+            </a>
+            <div class="nav_items">
+                <ul>
+                    <li><a href="/" aria-label="Go to home page">HOME</a></li>
+                    <li><a href="#" aria-label="Go to About page">ABOUT</a></li>
+                    <li><a href="/" aria-label="Go to Media page">MEDIA</a></li>
+                </ul>
+            </div> 
+            <div class="nav_email ">
+                <a href="/logout" aria-label="Mail Us">LOGOUT</a>
+            </div> 
+        </nav> 
+
+        <div class="humburger">
+            <div class="humburger-line"></div>
+            <div class="humburger-line"></div>
+            <div class="humburger-line"></div>
+        </div>
+    </header>
+
+    <section class="extra">
+        <h1 id="aboutus">ABOUT US</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vel, hic tempore nisi vero accusamus odio labore magni dolor itaque veritatis soluta nobis beatae fuga dicta culpa mollitia ipsum laudantium!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vel, hic tempore nisi vero accusamus odio labore magni dolor itaque veritatis soluta nobis beatae fuga dicta culpa mollitia ipsum laudantium!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vel, hic tempore nisi vero accusamus odio labore magni dolor itaque veritatis soluta nobis beatae fuga dicta culpa mollitia ipsum laudantium!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vel, hic tempore nisi vero accusamus odio labore magni dolor itaque veritatis soluta nobis beatae fuga dicta culpa mollitia ipsum laudantium!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vel, hic tempore nisi vero accusamus odio labore magni dolor itaque veritatis soluta nobis beatae fuga dicta culpa mollitia ipsum laudantium!
+        </p>
+    </section>
+
+
+	<section class="scs-1">
+
+        <h3>Let's Connect</h3>
+        <p>We would love to hear from you, please use the form below!</p>
+
+        <form action="/home" method="POST">
+            <div>
+                <div>
+                    <label for="">Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div>
+                    <label for="">Email</label> 
+                    <input type="email" name="email" required>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="">Phone</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                <div>
+                    <label for="">Bike Type</label>
+                    <select name="InquiryType" id="">
+                        <option value="Mordern">Mordern</option> 
+                        <option value="Vintage">Vintage</option>
+                        <option value="Classic">Classic</option>
+                    </select>
+                </div>
+            </div>
+ 
+            <div>
+                <div style="margin: 0px 0px 20px 0px;">
+                <label for="">Message</label>
+                <textarea name="message" id="" cols="30" rows="10" required></textarea>
+                </div>   
+            </div>
+
+            <div style="display: flex; justify-content: center;" >
+                <input type="submit" value="Submit" class="btn-2">
+            </div>
+        </form>
+
+
+
+    </section>
+    
+    <footer class="footer">
+        <div>
+        </div>
+        <div>© 2023  Website by mohit bagdi</div>
+    </footer>
+    
+</body>  
+</html>  

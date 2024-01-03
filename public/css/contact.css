@@ -1,0 +1,165 @@
+body{
+    position: relative;
+}
+
+.scs-1{
+    width: 600px;
+    margin: 0px auto; 
+    padding: 60px 0px;
+}
+
+.scs-1>h3{
+   font-size: 30px;
+   margin: 0px 0px 0px 0px;
+}
+
+.scs-1>p{
+   font-size: 16px;
+   margin: 0px 0px 20px 0px;
+   color: rgba(100, 100, 100, 0.8);
+}
+
+
+.scs-1>form label{
+    margin: 0px 0px 5px 0px; 
+    font-size: 13px;
+}
+  
+.scs-1>form>div{
+    display: flex;
+}
+
+.scs-1>form>div>div{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+}
+
+.scs-1>form>div>div:nth-child(1){
+
+    margin: 0px 20px 20px 0px;
+
+}
+
+.scs-1>form>div>div>input{
+    outline: none;
+    padding: 8px 16px;
+    margin: 8px 0px;
+    border: none;
+    background-color:  #282828;
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.scs-1>form>div>div>input:focus {
+    outline: 2px solid #3282B8;
+    background-color: #1C1C1C;
+}
+
+.btn-2{
+    outline: none;
+    background-color: #3282B8;
+    padding: 8px;
+    border: none;
+    display: block;
+    margin: 8px 0px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.scs-1>form>div>div>textarea{
+    outline: none;
+    padding: 8px 16px;
+    margin: 8px 0px;
+    border: none;
+    background-color:  #282828;
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.scs-1>form>div>div>select{
+    outline: none;
+    padding: 8px 16px;
+    margin: 8px 0px;
+    border: none;
+    background-color:  #282828;
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+}
+
+ 
+.scs-1-2{
+    color: var( --dark);
+    font-size: 16px;
+    margin: 30px 0px;
+
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.scs-1-2>div>p:nth-child(1){
+    font-weight: bold;
+    margin: 0px 0px 6px 0px;
+}
+
+.scs-1-2>div>p:nth-child(2){ 
+    font-style: italic;
+}
+
+
+
+.extra{
+    width: 1000px;
+    margin: 60px auto;
+    text-align: center;
+    color: #909090;
+}
+
+.extra>h1{
+    font-size: 32px;
+    margin: 8px 0px;
+    color: white;
+}
+
+
+
+
+ 
+@media only screen and (max-width:1100px){
+    .extra{
+        width: 600px;
+    }
+}
+
+
+ 
+@media only screen and (max-width:800px){
+    .extra{
+        width: 90%;
+    }
+}
+ 
+@media only screen and (max-width:700px){
+
+    .scs-1>form>div{
+        flex-direction: column;
+    }
+
+    .scs-1{
+        width: 300px;
+    }
+
+    .scs-1-2{
+        flex-direction: column;
+    }
+
+    .scs-1-2>div:nth-child(1){
+        margin: 0px 0px 20px 0px;
+    }
+}
