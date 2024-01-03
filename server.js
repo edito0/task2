@@ -11,7 +11,9 @@ var MongoStore = require('connect-mongo')(session);
 // q1OmCaOrMz1wsyzd
 // mongodb+srv://mohitbagdi280:q1OmCaOrMz1wsyzd@cluster0.f4nbmgb.mongodb.net/?retryWrites=true&w=majority
 
-mongoose.connect('mongodb+srv://mohitbagdi280:q1OmCaOrMz1wsyzd@cluster0.f4nbmgb.mongodb.net/?retryWrites=true&w=majority', {
+// Can be write in env variables to protect data but I had less time.
+
+mongoose.connect('mongodb+srv://mohitbagdi280:q1OmCaOrMz1wsyzd@cluster0.f4nbmgb.mongodb.net/?retryWrites=true&w=majority', { 
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, (err) => { 

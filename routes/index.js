@@ -31,16 +31,15 @@ router.post('/', async function (req, res, next) {
 
 			const passwordMatched = await bcrypt.compare(req.body.password, data.password);
 
-			if (passwordMatched) {
+			if (passwordMatched) { 
 				req.session.userId = data.unique_id;
-
 				res.redirect('/home'); 
 
 			} else {
-				res.send({ "Success": "Wrong password!" });
+				res.send({ "Error": "Wrong password!" });
 			}
 		} else {
-			res.send({ "Success": "This Email Is not regestered!" });
+			res.send({ "Error": "This Email Is not regestered!" });
 		}
 	});
 });
@@ -113,7 +112,7 @@ router.get('/home', function (req, res, next) {
 			res.redirect('/');
 		} else {
 			//console.log("found");
-			return res.render('data.ejs', { "name": data.username, "email": data.email });
+			return res.render('data.ejs', { "name": data.username});
 		}
 	});
 });
@@ -128,10 +127,11 @@ router.post('/home', function (req, res, next) {
 		var newMesage = new Contact({
 			name: personInfo.name,
 			email: personInfo.email,
-			Phone: personInfo.phone,
+			Phone: personInfo.phone, 
 			InquiryType: personInfo.InquiryType,
 			message: personInfo.message
-		});
+		}); 
+		 
 
 		newMesage.save(function (err, Person) {
 			if (err)
@@ -140,7 +140,7 @@ router.post('/home', function (req, res, next) {
 				console.log('Success');
 		});
 
-		return res.render('data.ejs',{ "Success": "We Will reach you soon." });
+		res.send({ "Success": "We Will reach you soon." });
 	}
 
 });
@@ -192,10 +192,6 @@ router.post('/forgetpass', function (req, res, next) {
 	});
 
 });
-
-
-
-//CONTACT PAGE
 
 
 

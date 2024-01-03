@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
   
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/contact.css">
@@ -13,6 +16,35 @@
     <script defer src="/app.js"></script>
 
     <title>Welcome</title>
+
+
+    <script type="text/javascript">
+		$(document).ready(function(){
+
+			$( "#form3" ).submit(function(event) {
+
+				event.preventDefault();
+
+				$.ajax({
+					type: 'POST',
+					url: '/home',
+					data: $('#form3').serialize(),
+					dataType: "json",
+					success: function(response){
+						$('#form3')[0].reset();
+						
+						if (response.Success=="We Will reach you soon.") {
+							alert("We Will reach you soon.");
+							document.getElementById("aa").click();
+						};
+					},
+					error: function() {
+					}
+				})
+			});
+
+		});
+	</script>
 
 </head> 
 
@@ -43,7 +75,7 @@
     </header>
 
     <section class="extra">
-        <h1 id="aboutus">ABOUT US</h1>
+        <h1 id="aboutus">ABOUT US</h1> 
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vel, hic tempore nisi vero accusamus odio labore magni dolor itaque veritatis soluta nobis beatae fuga dicta culpa mollitia ipsum laudantium!
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vel, hic tempore nisi vero accusamus odio labore magni dolor itaque veritatis soluta nobis beatae fuga dicta culpa mollitia ipsum laudantium!
@@ -59,7 +91,7 @@
         <h3>Let's Connect</h3>
         <p>We would love to hear from you, please use the form below!</p>
 
-        <form action="/home" method="POST">
+        <form action="/home" id="form3" method="POST">
             <div>
                 <div>
                     <label for="">Name</label>
@@ -92,7 +124,7 @@
                 </div>   
             </div>
 
-            <div style="display: flex; justify-content: center;" >
+            <div style="display: flex; justify-content: center;" > 
                 <input type="submit" value="Submit" class="btn-2">
             </div>
         </form>
